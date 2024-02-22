@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int search(int numbers[], int low, int high, int value) 
 {
 	return -1;
 }
-
+//bruh
 void printArray(int numbers[], int sz)
 {
 	int i;
