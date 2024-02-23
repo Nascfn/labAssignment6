@@ -3,7 +3,27 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
-	return -1;
+	if(low == high)
+	{
+		return -1;
+	}
+	int midPoint = (low + high) / 2;
+
+	if(numbers[midPoint] == value)
+	{
+		return midPoint;
+	}
+	else if(numbers[midPoint] > value)
+	{
+		int newLow = midPoint + 1;
+		return search(numbers, newLow, high, value);
+	}
+	else if(numbers[midPoint] < value)
+	{
+		int newHigh = midPoint - 1;
+		return search(numbers, low, newHigh, value);
+	}
+
 }
 //bruh
 void printArray(int numbers[], int sz)
